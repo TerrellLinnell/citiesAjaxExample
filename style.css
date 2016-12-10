@@ -15,3 +15,11 @@
   color:white;
   border-style: dotted;
 }
+
+.dataRemove{
+  border-radius: 25px;
+  border: solid black 2px;
+  background-color:red;
+  color:white;
+  border-style: double;
+}

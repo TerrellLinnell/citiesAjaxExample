@@ -12,20 +12,27 @@ var mapToArray = function (arr) {
 
 var dataLoad = function(){
 
-$('.table').append('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
-setTimeout(function () {
-  $.ajax({
-    url:"https://api.meetup.com/2/cities",
-    type: 'GET',
-    success: function(data) {
-$('i').css("display", "none");
-  mapToArray(data.results);
-
-    },
+  $('.table').append('<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>');
+    setTimeout(function () {
+      $.ajax({
+        url:"https://api.meetup.com/2/cities",
+        type: 'GET',
+        success: function(data) {
+          $('i').css("display", "none");
+          mapToArray(data.results);
+      },
     dataType: 'jsonp'
   })
-}, 1500);
+}, 500);
 
 }
 
 $('.dataLoad').click(dataLoad);
+
+
+var dataRemove = function() {
+
+  $('tbody').remove();
+
+};
+$('.dataRemove').click(dataRemove);
