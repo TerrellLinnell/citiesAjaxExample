@@ -27,7 +27,7 @@ var dataLoad = function(){
 
 }
 
-$('.dataLoad').click(dataLoad);
+$('.data-Load').click(dataLoad);
 
 
 var dataRemove = function() {
@@ -35,4 +35,4 @@ var dataRemove = function() {
   $('tbody').remove();
 
 };
-$('.dataRemove').click(dataRemove);
+$('.data-Remove').click(dataRemove);
